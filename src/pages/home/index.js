@@ -5,6 +5,13 @@ import Typewriter from "typewriter-effect";
 import JumbledTypewriter from "./JumbledTypewriter";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
+import {
+  MDBFooter,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBIcon
+} from "mdb-react-ui-kit";
 
 export const Home = () => {
   return (
@@ -25,26 +32,26 @@ export const Home = () => {
               <div className="intro mx-auto">
                 <h2 className="mb-1x">{introdata.title}</h2>
                 <h1 className="fluidz-48 mb-1x">
-                <JumbledTypewriter
-  strings={[
-    introdata.animated.first,
-    introdata.animated.second,
-    introdata.animated.third,
-    introdata.animated.fourth,
-    introdata.animated.fifth,
-    introdata.animated.sixth,
-    introdata.animated.seventh,
-    introdata.animated.eighth,
-    introdata.animated.ninth,
-    introdata.animated.tenth,
-  ]}
-  options={{
-    autoStart: true,
-    loop: true,
-    deleteSpeed: 10,
-  }}
-/>
-{/* <Typewriter
+                  <JumbledTypewriter
+                    strings={[
+                      introdata.animated.first,
+                      introdata.animated.second,
+                      introdata.animated.third,
+                      introdata.animated.fourth,
+                      introdata.animated.fifth,
+                      introdata.animated.sixth,
+                      introdata.animated.seventh,
+                      introdata.animated.eighth,
+                      introdata.animated.ninth,
+                      introdata.animated.tenth
+                    ]}
+                    options={{
+                      autoStart: true,
+                      loop: true,
+                      deleteSpeed: 10
+                    }}
+                  />
+                  {/* <Typewriter
                     options={{
                       strings: [
                         introdata.animated.first,
@@ -89,5 +96,13 @@ export const Home = () => {
         </div>
       </section>
     </HelmetProvider>
+  );
+};
+
+const Footer = () => {
+  return (
+    <MDBFooter bgColor="light" className="text-center text-lg-start text-muted">
+      {/* Footer content */}
+    </MDBFooter>
   );
 };
